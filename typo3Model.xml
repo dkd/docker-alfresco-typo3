@@ -42,6 +42,13 @@
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
       </type>
+      <type name="dkd:typo3:arbitrary">
+          <title>TYPO3 Typeless/arbitrary Record</title>
+          <parent>cm:content</parent>
+          <mandatory-aspects>
+              <aspect>dkd:typo3:aspect:general</aspect>
+          </mandatory-aspects>
+      </type>
   </types>
   <aspects>
       <aspect name="dkd:typo3:aspect:general">
@@ -52,6 +59,18 @@
                   <mandatory enforced="true">true</mandatory>
                   <multiple>false</multiple>
               </property>
+			  <property name="dkd:typo3:general:record_table">
+				  <type>d:text</type>
+                  <multiple>false</multiple>
+			  </property>
+			  <property name="dkd:typo3:general:record_id">
+				  <type>d:int</type>
+                  <multiple>false</multiple>
+			  </property>
+			  <property name="dkd:typo3:general:record_data">
+				  <type>d:content</type>
+                  <multiple>false</multiple>
+			  </property>
           </properties>
       </aspect>
   </aspects>
