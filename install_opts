@@ -1,0 +1,4 @@
+mode=unattended
+alfresco_admin_password=AlfrescoAdmin
+installer-language=en
+baseunixservice_install_as_service=1

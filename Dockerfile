@@ -1,14 +1,10 @@
 FROM java:7
 MAINTAINER Johannes Goslar
 
-RUN wget -O alfresco.bin \
-http://dl.alfresco.com/release/community/5.0.d-build-00002/alfresco-community-5.0.d-installer-linux-x64.bin \
+ADD ./install_opts install_opts
+RUN wget -q -O alfresco.bin http://dl.alfresco.com/release/community/5.0.d-build-00002/alfresco-community-5.0.d-installer-linux-x64.bin \
 && chmod +x alfresco.bin \
-&& ./alfresco.bin \
---mode text \
---installer-language en \
---baseunixservice_install_as_service 1 \
---alfresco_admin_password AlfrescoAdmin \
+&& ./alfresco.bin --optionfile install_opts \
 && rm ./alfresco.bin
 
 ADD ./typo3-model-context.xml /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco/extension/
