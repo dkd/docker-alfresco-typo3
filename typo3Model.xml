@@ -23,7 +23,7 @@
       <!--  Enterprise-wide generic document type -->
       <type name="dkd:typo3:pages">
           <title>TYPO3 Page</title>
-          <parent>cm:content</parent>
+          <parent>cm:folder</parent>
           <mandatory-aspects>
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
