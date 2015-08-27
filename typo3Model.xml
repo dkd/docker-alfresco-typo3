@@ -21,6 +21,13 @@
   </namespaces>
   <types>
       <!--  Enterprise-wide generic document type -->
+      <type name="dkd:typo3:sys_domain">
+          <title>TYPO3 Site</title>
+          <parent>st:site</parent>
+          <mandatory-aspects>
+              <aspect>dkd:typo3:aspect:general</aspect>
+          </mandatory-aspects>
+      </type>
       <type name="dkd:typo3:pages">
           <title>TYPO3 Page</title>
           <parent>cm:folder</parent>
@@ -54,23 +61,18 @@
       <aspect name="dkd:typo3:aspect:general">
           <title>TYPO3 base attributes</title>
           <properties>
-              <property name="dkd:typo3:general:uuid">
+              <property name="dkd:typo3:general:record_table">
                   <type>d:text</type>
-                  <mandatory enforced="true">true</mandatory>
                   <multiple>false</multiple>
               </property>
-			  <property name="dkd:typo3:general:record_table">
-				  <type>d:text</type>
+              <property name="dkd:typo3:general:record_id">
+                  <type>d:int</type>
                   <multiple>false</multiple>
-			  </property>
-			  <property name="dkd:typo3:general:record_id">
-				  <type>d:int</type>
+              </property>
+              <property name="dkd:typo3:general:record_data">
+                  <type>d:text</type>
                   <multiple>false</multiple>
-			  </property>
-			  <property name="dkd:typo3:general:record_data">
-				  <type>d:text</type>
-                  <multiple>false</multiple>
-			  </property>
+              </property>
           </properties>
       </aspect>
   </aspects>
