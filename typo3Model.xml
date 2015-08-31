@@ -23,7 +23,8 @@
       <!--  Enterprise-wide generic document type -->
       <type name="dkd:typo3:sys_domain">
           <title>TYPO3 Site</title>
-          <parent>st:site</parent>
+          <!-- Note: domains treated as pseudo-folders; not records! -->
+          <parent>cm:folder</parent>
           <mandatory-aspects>
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
