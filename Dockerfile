@@ -10,6 +10,10 @@ RUN wget -q -O alfresco.bin http://dl.alfresco.com/release/community/5.0.d-build
 ADD ./typo3-model-context.xml /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco/extension/
 ADD ./typo3Model.xml /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco/extension/
 
+ADD ./alfresco-global.properties /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco-global.properties
+
+#RUN sed -i s/localhost/docker/g /opt/alfresco-5.0.d/tomcat/shared/classes/alfresco/web-extension/share-config-custom.xml
+
 EXPOSE 80
 EXPOSE 21
 EXPOSE 139
@@ -19,4 +23,4 @@ EXPOSE 8009
 EXPOSE 8080
 EXPOSE 8443
 
-CMD service alfresco start && sleep 10 && tail -F /opt/alfresco-5.0.d/alfresco.log && tail -F /var/log/pgsql 
+CMD service alfresco start && sleep 10 && tail -F /opt/alfresco-5.0.d/alfresco.log && tail -F /opt/alfresco-5.0.d/share.log && tail -F /var/log/pgsql.log
