@@ -74,6 +74,10 @@
                   <type>d:text</type>
                   <multiple>false</multiple>
               </property>
+              <property name="dkd:typo3:general:fullTitle">
+                  <type>d:text</type>
+                  <multiple>false</multiple>
+              </property>
           </properties>
       </aspect>
   </aspects>
