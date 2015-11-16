@@ -29,6 +29,13 @@
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
       </type>
+      <type name="dkd:typo3:be_users">
+          <title>TYPO3 Backend User</title>
+          <parent>cm:person</parent>
+          <mandatory-aspects>
+              <aspect>dkd:typo3:aspect:general</aspect>
+          </mandatory-aspects>
+      </type>
       <type name="dkd:typo3:pages">
           <title>TYPO3 Page</title>
           <parent>cm:folder</parent>
