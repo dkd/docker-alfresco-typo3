@@ -13,6 +13,8 @@
       <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
       <!-- Import Alfresco Content Domain Model Definitions -->
       <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+      <!-- Import Alfresco User Domain Model Definitions -->
+      <import uri="http://www.alfresco.org/model/user/1.0" prefix="usr"/>
   </imports>
   <!-- Introduction of new namespaces defined by this model -->
   <!-- NOTE: The following namespace my.new.model should be changed to reflect your own namespace -->
@@ -31,7 +33,7 @@
       </type>
       <type name="dkd:typo3:be_users">
           <title>TYPO3 Backend User</title>
-          <parent>cm:person</parent>
+          <parent>usr:user</parent>
           <mandatory-aspects>
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
