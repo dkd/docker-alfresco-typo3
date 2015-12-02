@@ -41,6 +41,27 @@
       <type name="dkd:typo3:pages">
           <title>TYPO3 Page</title>
           <parent>cm:folder</parent>
+          <properties>
+              <property name="dkd:typo3:pages:doktype">
+                  <type>d:int</type>
+                  <mandatory>true</mandatory>
+                  <multiple>false</multiple>
+              </property>
+          </properties>
+          <associations>
+              <association name="dkd:typo3:pages:shortcut_to">
+                  <title>Shortcut to page</title>
+                  <source>
+                      <mandatory>false</mandatory>
+                      <many>true</many>
+                  </source>
+                  <target>
+                      <class>dkd:typo3:pages</class>
+                      <mandatory>false</mandatory>
+                      <many>false</many>
+                  </target>
+              </association>
+          </associations>
           <mandatory-aspects>
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
@@ -55,6 +76,50 @@
       <type name="dkd:typo3:tt_content">
           <title>TYPO3 Content</title>
           <parent>cm:content</parent>
+          <properties>
+              <property name="dkd:typo3:tt_content:CType">
+                  <type>d:text</type>
+                  <mandatory>true</mandatory>
+                  <multiple>false</multiple>
+              </property>
+              <property name="dkd:typo3:tt_content:colPos">
+                  <type>d:int</type>
+                  <mandatory>true</mandatory>
+                  <multiple>false</multiple>
+              </property>
+              <property name="dkd:typo3:tt_content:header_layout">
+                  <type>d:text</type>
+                  <mandatory>false</mandatory>
+                  <multiple>false</multiple>
+              </property>
+              <property name="dkd:typo3:tt_content:bodytext">
+                  <type>d:text</type>
+                  <mandatory>false</mandatory>
+                  <multiple>false</multiple>
+              </property>
+              <property name="dkd:typo3:tt_content:subHeader">
+                  <type>d:text</type>
+                  <mandatory>false</mandatory>
+                  <multiple>false</multiple>
+              </property>
+              <property name="dkd:typo3:tt_content:layout">
+                  <type>d:int</type>
+                  <mandatory>false</mandatory>
+                  <multiple>false</multiple>
+              </property>
+              <property name="dkd:typo3:tt_content:sectionindex">
+                  <type>d:boolean</type>
+                  <mandatory>false</mandatory>
+                  <multiple>false</multiple>
+                  <default>false</default>
+              </property>
+              <property name="dkd:typo3:tt_content:rte_enabled">
+                  <type>d:boolean</type>
+                  <mandatory>false</mandatory>
+                  <multiple>false</multiple>
+                  <default>false</default>
+              </property>
+          </properties>
           <mandatory-aspects>
               <aspect>dkd:typo3:aspect:general</aspect>
           </mandatory-aspects>
