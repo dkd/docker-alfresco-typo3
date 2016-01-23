@@ -2,7 +2,7 @@ FROM java:7
 MAINTAINER Johannes Goslar
 
 ADD ./install_opts install_opts
-RUN wget -q -O alfresco.bin http://dl.alfresco.com/release/community/5.0.d-build-00002/alfresco-community-5.0.d-installer-linux-x64.bin \
+RUN wget -O alfresco.bin http://dl.alfresco.com/release/community/5.0.d-build-00002/alfresco-community-5.0.d-installer-linux-x64.bin \
 && chmod +x alfresco.bin \
 && ./alfresco.bin --optionfile install_opts \
 && rm ./alfresco.bin
